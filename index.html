@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Fav One ✨</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',sans-serif;height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#4b0082,#7b2cbf,#c77dff,#e0aaff);position:relative}.container{width:90%;max-width:540px;padding:30px;border-radius:30px;background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);box-shadow:0 10px 35px rgba(0,0,0,0.3);z-index:2}.photo{width:190px;height:190px;object-fit:cover;border-radius:50%;border:5px solid white;box-shadow:0 0 25px rgba(255,255,255,0.9);margin-bottom:20px}h1{color:white;font-size:38px;margin-bottom:15px;animation:glow 1.5s infinite alternate}p{color:white;font-size:18px;line-height:1.7}button{margin-top:22px;padding:13px 28px;border:none;border-radius:25px;background:white;color:#6a00f4;font-size:18px;font-weight:bold;cursor:pointer;transition:.3s}button:hover{transform:scale(1.08)}.crown{font-size:55px;margin-top:18px;animation:bounce 1s infinite}.sparkle{position:absolute;width:8px;height:8px;border-radius:50%;background:white;opacity:.9;animation:fall linear forwards}.balloon{position:absolute;bottom:-120px;width:60px;height:75px;border-radius:50%;animation:rise linear forwards;z-index:1}.balloon:after{content:'';position:absolute;width:2px;height:60px;background:white;left:50%;top:75px}@keyframes rise{to{transform:translateY(-120vh);opacity:0}}@keyframes glow{from{text-shadow:0 0 10px white}to{text-shadow:0 0 25px #ffd6ff,0 0 40px white}}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes fall{to{transform:translateY(110vh) scale(0);opacity:0}}
+</style>
+</head>
+<body>
+<div class="container">
+<img src="WhatsApp Image 2026-04-21 at 23.14.08.png" class="photo">
+<h1>✨ Ma Fav One ✨</h1>
+<p>Happy Birthday, Pitt. Semoga selalu sehat, bahagia, dan sukses.<br>Thank you for always being a good sister.<br>Semoga semua impiannya tercapai dan selalu dikelilingi orang-orang baik.<br>Mari bertumbuh bersama.<br>Wishing you joy, love, and endless happiness. 💜</p>
+<button onclick="playMusic()">Long Live 🎵</button>
+<div class="crown">👑</div>
+<audio id="music" loop><source src="Taylor_Swift_-_Long_Live.mp3" type="audio/mp3"></audio>
+</div>
+<script>
+function playMusic(){document.getElementById('music').play();alert('Happy Birthday Pitt 🎂💜');}
+function createSparkle(){for(let i=0;i<8;i++){let s=document.createElement('div');s.classList.add('sparkle');s.style.left=Math.random()*100+'vw';s.style.top='-10px';s.style.width=s.style.height=(4+Math.random()*8)+'px';s.style.animationDuration=(2+Math.random()*3)+'s';document.body.appendChild(s);setTimeout(()=>{s.remove()},5000);}}
+function createBalloon(){const colors=['#ff4d6d','#ffd60a','#00f5d4','#ffffff','#c77dff','#ff99c8'];let b=document.createElement('div');b.classList.add('balloon');b.style.left=Math.random()*100+'vw';b.style.background=colors[Math.floor(Math.random()*colors.length)];b.style.animationDuration=(5+Math.random()*4)+'s';document.body.appendChild(b);setTimeout(()=>{b.remove()},9000);}
+setInterval(createSparkle,250);setInterval(createBalloon,400);
+</script>
+</body>
+</html>
+
+
